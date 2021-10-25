@@ -14,6 +14,6 @@ public class MainClass {
 
         LogInPage standardUser = new LogInPage(driver);
         driver.get("https://www.saucedemo.com/");
-        standardUser.userAuthorization("standard_user","secret_sauce");
+        standardUser.userAuthorization("standard_555", "secret_s6");
     }
 }

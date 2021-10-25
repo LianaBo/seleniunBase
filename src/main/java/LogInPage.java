@@ -11,6 +11,7 @@ public class LogInPage {
     private By userNameInput = By.xpath("//input[@id='user-name']");
     private By userPasswordInput = By.xpath("//input[@id='password']");
     private By logInButton = By.xpath("//input[@id='login-button']");
+    private By testError = By.xpath("//h3[@data-test = 'error']");
 
 
     public ProductsPage clickLogInButton() {
@@ -26,6 +27,18 @@ public class LogInPage {
     public LogInPage typePassword(String password) {
         driver.findElement(userPasswordInput).sendKeys(password);
         return this;
+    }
+
+    public String getTextErrorPasswordAndUsername() {
+        return driver.findElement(testError).getText();
+    }
+
+    public String getTextErrorPassword() {
+        return driver.findElement(testError).getText();
+    }
+
+    public String getTextErrorUsername() {
+        return driver.findElement(testError).getText();
     }
 
     public ProductsPage userAuthorization(String username, String password) {
